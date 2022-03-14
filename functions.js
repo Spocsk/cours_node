@@ -20,3 +20,22 @@ export function getFirstFibonacciNumber(n) {
     }
     return fibo;
 }
+
+
+export function decryptCaeserCode(code) {
+    let combinations = []
+    let count = 0
+    let idx = 0
+    let tmp = []
+    const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    while (count < 26) {
+        for (let i = 0; i < code.length; i++) {
+            tmp[i] = alphabet[alphabet.indexOf(code[i]) + idx]
+        }
+        combinations.push(tmp.join(''))
+        count++;
+        tmp = []
+        idx++;
+    }
+    return combinations
+}
