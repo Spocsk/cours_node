@@ -1,3 +1,3 @@
-import { getFirstFibonacciNumber } from './functions.js'
+import { decryptCaeserCode } from './functions.js'
 
-console.log(getFirstFibonacciNumber(10))
+console.log(decryptCaeserCode('ABCG'))
