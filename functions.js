@@ -1,8 +1,8 @@
-function calculateCircleArea(radius) {
+export function calculateCircleArea(radius) {
     return Math.PI * radius * radius;
 }
 
-function isValidDate() {
+export function isValidDate() {
     for (let index = 2014; index < 2050; index++) {
         let date = `${index}/01/1`
         if (date instanceof Date && !isNaN(date)) {
@@ -11,7 +11,7 @@ function isValidDate() {
     }
 }
 
-function getFirstFibonacciNumber(n) {
+export function getFirstFibonacciNumber(n) {
     const fibo = new Array(n)
     fibo[0] = 0
     fibo[1] = 1
@@ -20,6 +20,3 @@ function getFirstFibonacciNumber(n) {
     }
     return fibo;
 }
-
-
-console.log(getFirstFibonacciNumber(8))
